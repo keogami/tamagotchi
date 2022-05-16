@@ -1,0 +1,46 @@
+body {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+}
+
+body > div {
+  width: 60vw;
+}
+
+.shell {
+  width: 50vw;
+  height: 3px;
+  background: #D9D9D9;
+  border-radius: 4px;
+}
+
+.bar {
+	height: 3px;
+	border-radius: 4px;
+}
+
+#battery .bar {
+	background: #78F84B;
+}
+
+#love .bar {
+  background: #FF6A6A;
+}
+
+#battery > img {
+  margin: 0 5px;
+}
+
+
+.bar-cover {
+  display: flex;
+  gap: 1em;
+  place-items: center;
+}
+
+#bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

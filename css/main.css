@@ -2,10 +2,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	place-items: center;
+  padding: 0px;
+  height: 100vh;
+  justify-content: space-evenly;
 }
 
 body > div {
-  width: 60vw;
+  width: 45vw;
+  max-width: 280px;
 }
 
 .shell {

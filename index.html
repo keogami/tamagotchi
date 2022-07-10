@@ -25,13 +25,38 @@
       <span>(^・x・^)</span>
     </div>
     <div id="actions">
-      <button>Pet</button>
-      <button>Play</button>
-      <button>Feed</button>
-      <button>Bathe</button>
+      <button id="pet">Pet</button>
+      <button id="play">Play</button>
+      <button id="feed">Feed</button>
+      <button id="bathe">Bathe</button>
     </div>
     <div id="narration">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorem.
     </div>
   </body>
+  <script type="module">
+    import { Data, nextFace } from "./dist/mech.js"
+    const d = new Data(0.3, 0.5)
+
+    d.love += 0.02
+    d.health = d.health + 0.05
+
+
+    document.querySelector("#pet").onclick = async () => {
+      d.love += 0.02
+      document.querySelector("#face span").innerHTML = nextFace(d.love, d.health)
+    }
+
+    document.querySelector("#play").onclick = async () => {
+      d.love += 0.04
+      d.health -= 0.02
+      document.querySelector("#face span").innerHTML = nextFace(d.love, d.health)
+    }
+
+    document.querySelector("#feed").onclick = async () => {
+      d.health += 0.03
+      document.querySelector("#face span").innerHTML = nextFace(d.love, d.health)
+    }
+
+  </script>
 </html>
